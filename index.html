@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Coding — Home</title>
+    <link rel="shortcut icon" href="images/image-removebg-preview (3).webp">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* font-display utility — Nunito (headings/brand text) */
+        .font-display { font-family: 'Nunito', Inter, ui-sans-serif, system-ui, sans-serif; }
+        /* font-sans utility — Inter (body text) */
+        body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+    </style>
+</head>
+
+<body id="top" class="bg-white text-slate-700 font-sans antialiased dark:bg-slate-900 dark:text-slate-200">
+
+    <div class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur border-b border-gray-100 dark:bg-slate-900/90 dark:border-slate-700">
+        <header class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 h-16 lg:h-20 flex items-center justify-between">
+
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <img src="images/image-removebg-preview (1).webp" alt="Happy Coding institute logo — computer coaching in Jaipur" class="w-[4.5rem] h-[4.5rem] object-contain">
+                <a href="index.html" class="font-display text-xl font-extrabold text-slate-900 hover:text-purple-600 transition-colors dark:text-white">
+                    Happy Coding
+                </a>
+            </div>
+
+            <!-- Desktop nav -->
+            <nav class="hidden lg:flex items-center" aria-label="Main navigation">
+                <ul class="flex items-center gap-8">
+                    <li><a class="font-semibold text-purple-600 border-b-2 border-purple-600 pb-1 dark:text-purple-400 dark:border-purple-400" href="index.html">Home</a></li>
+                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 transition dark:text-slate-300 dark:hover:text-purple-400" href="about.html">About</a></li>
+                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 transition dark:text-slate-300 dark:hover:text-purple-400" href="courses.html">Courses</a></li>
+                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 transition dark:text-slate-300 dark:hover:text-purple-400" href="gallery.html">Gallery</a></li>
+                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 transition dark:text-slate-300 dark:hover:text-purple-400" href="pricing.html">Pricing</a></li>
+                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 transition dark:text-slate-300 dark:hover:text-purple-400" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Desktop CTA -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="contact.html#enroll-form" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-md hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 transition">
+                    Enroll Now
+                </a>
+            </div>
+
+            <!-- Mobile hamburger toggle (CSS-only, no JS) -->
+            <label for="nav-toggle" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg text-purple-600 hover:bg-indigo-50 cursor-pointer" aria-label="Toggle navigation menu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </label>
+        </header>
+
+        <!-- Hidden checkbox — controls mobile menu open/close state without JS -->
+        <input type="checkbox" id="nav-toggle" class="hidden peer/nav">
+
+        <!-- Mobile dropdown nav — hidden by default, shown when checkbox is checked -->
+        <nav class="lg:hidden hidden peer-checked/nav:block bg-white border-t border-gray-100 shadow-lg dark:bg-slate-900 dark:border-slate-700" aria-label="Mobile navigation">
+            <ul class="flex flex-col px-4 py-4 gap-1">
+                <li><a class="block py-2.5 px-3 font-semibold text-purple-600 bg-indigo-50 rounded-lg dark:text-purple-400 dark:bg-slate-800" href="index.html">Home</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800" href="about.html">About</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800" href="courses.html">Courses</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800" href="gallery.html">Gallery</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800" href="pricing.html">Pricing</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800" href="contact.html">Contact</a></li>
+                <li class="pt-2">
+                    <a href="contact.html#enroll-form" class="block text-center py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 transition">Enroll Now</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="pt-16 lg:pt-20">
+
+        <section class="bg-gradient-to-br from-slate-50 via-white to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-24 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <h1 class="font-display text-3xl xs:text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-slate-900 dark:text-white leading-[1.15] mb-6">
+                        Master Coding, <br><span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-purple-400">Master Your Future</span>
+                    </h1>
+                    <p class="text-base md:text-lg text-slate-500 leading-relaxed mb-8 max-w-xl">
+                        Jaipur ka #1 computer coaching center — Web Design, Web Development, Digital Marketing, Graphic Design, Tally aur MS Office. 100% practical training, live projects aur placement support.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="courses.html" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-md hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 transition">
+                            View Courses
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor" class="ml-2"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+                        </a>
+                        <a href="contact.html" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full border-2 border-blue-600 text-blue-600 font-semibold hover:bg-blue-600 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 transition">
+                            Enroll Now
+                        </a>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 w-full h-64 sm:h-80 md:h-96 lg:h-[420px] overflow-hidden">
+                        <img src="images/hero-img-removebg-preview.png" alt="Happy Coding students learning coding together in Jaipur lab" class="w-full h-full object-center">
+                    </div>
+            </div>
+        </section>
+
+        <section class="py-12 md:py-16 dark:bg-slate-900">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row gap-6 justify-center items-stretch">
+                    <article class="flex-1 max-w-sm flex items-center gap-4 bg-white p-6 rounded-2xl shadow-md border border-indigo-50 hover:-translate-y-1 transition-transform dark:bg-slate-800 dark:border-slate-700">
+                        <div class="shrink-0 w-14 h-14 rounded-xl bg-blue-600/10 text-blue-600 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="currentColor"><path d="M320-240h80v-80h80v-80h-80v-80h-80v80h-80v80h80v80Zm200 0h280v-80H520v80Zm0-160h280v-80H520v80Zm-200-120h80v-80h80v-80h-80v-80h-80v80h-80v80h80v80Zm200-40h280v-80H520v80Z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-display font-bold text-slate-900 dark:text-white text-lg mb-1">500+ Students Trained</h4>
+                            <p class="text-slate-500 dark:text-slate-300 text-sm leading-relaxed">Students placed across top MNCs and startups.</p>
+                        </div>
+                    </article>
+                    <article class="flex-1 max-w-sm flex items-center gap-4 bg-white p-6 rounded-2xl shadow-md border border-indigo-50 hover:-translate-y-1 transition-transform dark:bg-slate-800 dark:border-slate-700">
+                        <div class="shrink-0 w-14 h-14 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="currentColor"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-10 9-22.5 16T606-208L590-80h-220Zm110-100q62 0 105-43t43-105q0-62-43-105t-105-43q-62 0-105 43t-43 105q0 62 43 105t105 43Z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-display font-bold text-slate-900 dark:text-white text-lg mb-1">10+ Years Experience</h4>
+                            <p class="text-slate-500 dark:text-slate-300 text-sm leading-relaxed">Industry expert trainers with real-world pedigree.</p>
+                        </div>
+                    </article>
+                    <article class="flex-1 max-w-sm flex items-center gap-4 bg-white p-6 rounded-2xl shadow-md border border-indigo-50 hover:-translate-y-1 transition-transform dark:bg-slate-800 dark:border-slate-700">
+                        <div class="shrink-0 w-14 h-14 rounded-xl bg-purple-600/10 text-purple-600 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="currentColor"><path d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-display font-bold text-slate-900 dark:text-white text-lg mb-1">95% Placement Rate</h4>
+                            <p class="text-slate-500 dark:text-slate-300 text-sm leading-relaxed">Our alumni are placed in reputed companies.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 bg-white dark:bg-slate-900">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-3">Why Choose Happy Coding</h2>
+                    <p class="text-slate-500 dark:text-slate-300 text-base md:text-lg">Four reasons why our students choose us every year</p>
+                </div>
+                <div class="flex flex-col sm:flex-row flex-wrap gap-6">
+                    <article class="flex flex-col gap-3 p-7 rounded-2xl bg-gradient-to-br from-amber-400/15 to-white dark:to-slate-800 border border-amber-400/30 hover:-translate-y-1 hover:shadow-xl transition flex-1 min-w-[200px]">
+                        <div class="text-amber-400"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28" fill="currentColor"><path d="M280-880h400v314q0 23-10 41t-28 29l-142 84 28 92h152l-124 88 48 152-124-94-124 94 48-152-124-88h152l28-92-142-84q-18-11-28-29t-10-41v-314Zm80 80v234l80 48v-282h-80Zm240 0h-80v282l80-48v-234Z"/></svg></div>
+                        <h4 class="font-display font-bold text-slate-900 dark:text-white text-xl">Expert Faculty</h4>
+                        <p class="text-slate-500 dark:text-slate-300 text-sm leading-relaxed">Our trainers have 10+ years of industry experience. Learn from working professionals, not just theorists.</p>
+                    </article>
+                    <article class="flex flex-col gap-3 p-7 rounded-2xl bg-gradient-to-br from-sky-500/15 to-white dark:to-slate-800 border border-sky-500/30 hover:-translate-y-1 hover:shadow-xl transition flex-1 min-w-[200px]">
+                        <div class="text-sky-500"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28" fill="currentColor"><path d="M480-390Zm-132-53 55 37 77-39 77 39 53-35-40-79H386l-38 77ZM209-160h541L646-369l-83 55-83-41-83 41-85-56-103 210ZM80-80l234-475q10-20 29.5-32.5T386-600h54v-280h280l-40 80 40 80H520v120h50q23 0 42 12t30 32L880-80H80Z"/></svg></div>
+                        <h4 class="font-display font-bold text-slate-900 dark:text-white text-xl">Live Projects</h4>
+                        <p class="text-slate-500 dark:text-slate-300 text-sm leading-relaxed">Work on real client projects during training — build a portfolio that gets you hired from day one.</p>
+                    </article>
+                    <article class="flex flex-col gap-3 p-7 rounded-2xl bg-gradient-to-br from-green-500/15 to-white dark:to-slate-800 border border-green-500/30 hover:-translate-y-1 hover:shadow-xl transition flex-1 min-w-[200px]">
+                        <div class="text-green-500"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28" fill="currentColor"><path d="m424-318 282-282-56-56-226 226-114-114-56 56 170 170ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h168q13-36 43.5-58t68.5-22q38 0 68.5 22t43.5 58h168q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Z"/></svg></div>
+                        <h4 class="font-display font-bold text-slate-900 dark:text-white text-xl">Placement Support</h4>
+                        <p class="text-slate-500 dark:text-slate-300 text-sm leading-relaxed">Dedicated placement cell with 40+ hiring partners. Resume prep, mock interviews, and job referrals included.</p>
+                    </article>
+                    <article class="flex flex-col gap-3 p-7 rounded-2xl bg-gradient-to-br from-red-400/15 to-white dark:to-slate-800 border border-red-400/30 hover:-translate-y-1 hover:shadow-xl transition flex-1 min-w-[200px]">
+                        <div class="text-red-400"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28" fill="currentColor"><path d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Z"/></svg></div>
+                        <h4 class="font-display font-bold text-slate-900 dark:text-white text-xl">Affordable Fees</h4>
+                        <p class="text-slate-500 dark:text-slate-300 text-sm leading-relaxed">Flexible EMI options with no hidden charges. Get certified without financial stress — invest in your future.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 bg-slate-50 dark:bg-slate-800">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-2">Our Values</h2>
+                    <p class="text-slate-500 dark:text-slate-300">What we value most</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="bg-white rounded-2xl p-7 shadow-md border border-gray-100 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-xl transition dark:bg-slate-800 dark:border-slate-700">
+                        <img src="images/values-1.webp" alt="Happy Coding students collaborating in lab — value: teamwork" class="w-full h-52 object-cover rounded-xl mb-5">
+                        <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-2">Practical Learning</h3>
+                        <p class="text-slate-500 dark:text-slate-300 text-sm leading-relaxed">We believe in learning by doing. Every concept is taught with hands-on practice and real project work.</p>
+                    </article>
+                    <article class="bg-white rounded-2xl p-7 shadow-md border border-gray-100 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-xl transition dark:bg-slate-800 dark:border-slate-700">
+                        <img src="images/values-2.webp" alt="Happy Coding mentor guiding students — value: mentorship" class="w-full h-52 object-cover rounded-xl mb-5">
+                        <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-2">Student First</h3>
+                        <p class="text-slate-500 dark:text-slate-300 text-sm leading-relaxed">Every decision is made with the student in mind — small batch sizes, personal attention, and flexible timing.</p>
+                    </article>
+                    <article class="bg-white rounded-2xl p-7 shadow-md border border-gray-100 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-xl transition dark:bg-slate-800 dark:border-slate-700">
+                        <img src="images/values-3.webp" alt="Happy Coding team celebrating student success — value: excellence" class="w-full h-52 object-cover rounded-xl mb-5">
+                        <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-2">Career Outcomes</h3>
+                        <p class="text-slate-500 dark:text-slate-300 text-sm leading-relaxed">Our success is measured by yours. 95% of our graduates land jobs within 3 months of completing their course.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 bg-white dark:bg-slate-900">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-2">Features</h2>
+                    <p class="text-slate-500 dark:text-slate-300">Our Advanced Features</p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-10 items-center">
+                    <div class="order-2 lg:order-1 w-full h-80 lg:h-96 rounded-3xl shadow-md overflow-hidden">
+                        <img src="images/features.webp" alt="Happy Coding institute features — modern lab and smart classrooms" class="w-full h-full object-cover">
+                    </div>
+                    <div class="order-1 lg:order-2 grid sm:grid-cols-2 gap-5">
+                        <article class="flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition"><span class="text-blue-600 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span><h3 class="font-semibold text-slate-900 dark:text-white">Smart Learning</h3></article>
+                        <article class="flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition"><span class="text-blue-600 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span><h3 class="font-semibold text-slate-900 dark:text-white">Live Classes</h3></article>
+                        <article class="flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition"><span class="text-blue-600 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span><h3 class="font-semibold text-slate-900 dark:text-white">Expert Mentors</h3></article>
+                        <article class="flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition"><span class="text-blue-600 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span><h3 class="font-semibold text-slate-900 dark:text-white">Skill Boosters</h3></article>
+                        <article class="flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition"><span class="text-blue-600 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span><h3 class="font-semibold text-slate-900 dark:text-white">Hands-On Practice</h3></article>
+                        <article class="flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition"><span class="text-blue-600 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg></span><h3 class="font-semibold text-slate-900 dark:text-white">Certification</h3></article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 dark:bg-slate-900">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+                <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 to-purple-600 p-10 md:p-14 lg:p-16 text-white grid md:grid-cols-2 gap-8 items-center shadow-md">
+                    <div>
+                        <h2 class="font-display text-3xl md:text-4xl font-extrabold mb-3">Ready to start your coding journey?</h2>
+                        <p class="text-white/90 text-base md:text-lg mb-8 leading-relaxed">Limited seats available in our upcoming batch. Enroll today and get a <strong>10% early-bird discount</strong> on all courses.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="contact.html#enroll-form" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white text-purple-600 font-bold hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/30 transition dark:bg-slate-700 dark:text-white dark:hover:bg-slate-600">
+                                Enroll Now
+                            </a>
+                            <a href="courses.html" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full border-2 border-white text-white font-bold hover:bg-white/10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/30 transition">
+                                View Courses
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden md:block h-48 lg:h-60 rounded-2xl bg-white/10 overflow-hidden backdrop-blur-sm">
+                        <img src="images/alt-features.webp" alt="Happy Coding hands-on practical session in progress" class="w-full h-full object-cover mix-blend-overlay opacity-80">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 bg-slate-50 dark:bg-slate-800">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-2">Testimonials</h2>
+                    <p class="text-slate-500 dark:text-slate-300">What our students say about us</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+                    <article class="testimonial-card bg-white p-7 rounded-2xl shadow-md border border-gray-100 flex flex-col gap-5 hover:-translate-y-1 hover:shadow-xl transition dark:bg-slate-800 dark:border-slate-700">
+                        <div class="flex items-center gap-4">
+                            <img src="images/photo-1438761681033-6461ffad8d80.webp" alt="Sarah Johnson — Happy Coding web development alumni review" class="w-14 h-14 rounded-full object-cover ring-4 ring-indigo-50">
+                            <div class="flex-1">
+                                <h3 class="font-display font-bold text-slate-900 dark:text-white text-lg">Sarah Johnson</h3>
+                                <p class="text-slate-500 dark:text-slate-300 text-sm mb-1">Web Developer</p>
+                                <div class="text-amber-400 text-sm" aria-label="5 out of 5 stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <blockquote class="text-slate-500 dark:text-slate-300 leading-relaxed relative pl-5 border-l-4 border-purple-600/50 italic">
+                            "The web development course exceeded my expectations. The instructors were knowledgeable and patient. I'm now working at a top tech company thanks to the skills I learned here."
+                        </blockquote>
+                    </article>
+                    <article class="testimonial-card bg-white p-7 rounded-2xl shadow-md border border-gray-100 flex flex-col gap-5 hover:-translate-y-1 hover:shadow-xl transition dark:bg-slate-800 dark:border-slate-700">
+                        <div class="flex items-center gap-4">
+                            <img src="images/photo-1494790108377-be9c29b29330.webp" alt="Michael Chen — Happy Coding digital marketing alumni review" class="w-14 h-14 rounded-full object-cover ring-4 ring-indigo-50">
+                            <div class="flex-1">
+                                <h3 class="font-display font-bold text-slate-900 dark:text-white text-lg">Michael Chen</h3>
+                                <p class="text-slate-500 dark:text-slate-300 text-sm mb-1">Digital Marketer</p>
+                                <div class="text-amber-400 text-sm" aria-label="5 out of 5 stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <blockquote class="text-slate-500 dark:text-slate-300 leading-relaxed relative pl-5 border-l-4 border-purple-600/50 italic">
+                            "Outstanding digital marketing program! The hands-on approach and real-world projects prepared me perfectly for the industry. Highly recommend this institute to anyone."
+                        </blockquote>
+                    </article>
+                    <article class="testimonial-card bg-white p-7 rounded-2xl shadow-md border border-gray-100 flex flex-col gap-5 hover:-translate-y-1 hover:shadow-xl transition dark:bg-slate-800 dark:border-slate-700">
+                        <div class="flex items-center gap-4">
+                            <img src="images/photo-1507003211169-0a1dd7228f2d.webp" alt="David Kumar — Happy Coding graphic design alumni review" class="w-14 h-14 rounded-full object-cover ring-4 ring-indigo-50">
+                            <div class="flex-1">
+                                <h3 class="font-display font-bold text-slate-900 dark:text-white text-lg">David Kumar</h3>
+                                <p class="text-slate-500 dark:text-slate-300 text-sm mb-1">Graphic Designer</p>
+                                <div class="text-amber-400 text-sm" aria-label="5 out of 5 stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <blockquote class="text-slate-500 dark:text-slate-300 leading-relaxed relative pl-5 border-l-4 border-purple-600/50 italic">
+                            "The graphic design course transformed my creative skills completely. The mentors provided valuable industry insights and helped me build an impressive portfolio."
+                        </blockquote>
+                    </article>
+                    <article class="testimonial-card bg-white p-7 rounded-2xl shadow-md border border-gray-100 flex flex-col gap-5 hover:-translate-y-1 hover:shadow-xl transition dark:bg-slate-800 dark:border-slate-700">
+                        <div class="flex items-center gap-4">
+                            <img src="images/photo-1544005313-94ddf0286df2.webp" alt="Emma Rodriguez — Happy Coding full stack alumni review" class="w-14 h-14 rounded-full object-cover ring-4 ring-indigo-50">
+                            <div class="flex-1">
+                                <h3 class="font-display font-bold text-slate-900 dark:text-white text-lg">Emma Rodriguez</h3>
+                                <p class="text-slate-500 dark:text-slate-300 text-sm mb-1">Full Stack Developer</p>
+                                <div class="text-amber-400 text-sm" aria-label="5 out of 5 stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <blockquote class="text-slate-500 dark:text-slate-300 leading-relaxed relative pl-5 border-l-4 border-purple-600/50 italic">
+                            "Best investment in my career! The comprehensive curriculum and supportive environment helped me transition from beginner to professional developer in just six months."
+                        </blockquote>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-14 md:py-16 bg-white dark:bg-slate-900">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-2">Companies</h2>
+                    <p class="text-slate-500 dark:text-slate-300">Our students are placed in top MNCs</p>
+                </div>
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-6 items-center">
+                    <div class="flex items-center justify-center h-20 rounded-xl bg-slate-50 hover:bg-indigo-50 transition dark:bg-slate-800 dark:hover:bg-slate-700"><img src="images/Company imgs/client-1.webp" alt="Happy Coding placement partner — top MNC collaborator 1" class="max-h-14 object-contain opacity-70 hover:opacity-100 dark:opacity-90 transition"></div>
+                    <div class="flex items-center justify-center h-20 rounded-xl bg-slate-50 hover:bg-indigo-50 transition dark:bg-slate-800 dark:hover:bg-slate-700"><img src="images/Company imgs/client-2.webp" alt="Happy Coding placement partner — top MNC collaborator 2" class="max-h-14 object-contain opacity-70 hover:opacity-100 dark:opacity-90 transition"></div>
+                    <div class="flex items-center justify-center h-20 rounded-xl bg-slate-50 hover:bg-indigo-50 transition dark:bg-slate-800 dark:hover:bg-slate-700"><img src="images/Company imgs/client-3.webp" alt="Happy Coding placement partner — top MNC collaborator 3" class="max-h-14 object-contain opacity-70 hover:opacity-100 dark:opacity-90 transition"></div>
+                    <div class="flex items-center justify-center h-20 rounded-xl bg-slate-50 hover:bg-indigo-50 transition dark:bg-slate-800 dark:hover:bg-slate-700"><img src="images/Company imgs/client-4.webp" alt="Happy Coding placement partner — top MNC collaborator 4" class="max-h-14 object-contain opacity-70 hover:opacity-100 dark:opacity-90 transition"></div>
+                    <div class="flex items-center justify-center h-20 rounded-xl bg-slate-50 hover:bg-indigo-50 transition dark:bg-slate-800 dark:hover:bg-slate-700"><img src="images/Company imgs/client-5.webp" alt="Happy Coding placement partner — top MNC collaborator 5" class="max-h-14 object-contain opacity-70 hover:opacity-100 dark:opacity-90 transition"></div>
+                    <div class="flex items-center justify-center h-20 rounded-xl bg-slate-50 hover:bg-indigo-50 transition dark:bg-slate-800 dark:hover:bg-slate-700"><img src="images/Company imgs/client-6.webp" alt="Happy Coding placement partner — top MNC collaborator 6" class="max-h-14 object-contain opacity-70 hover:opacity-100 dark:opacity-90 transition"></div>
+                    <div class="flex items-center justify-center h-20 rounded-xl bg-slate-50 hover:bg-indigo-50 transition dark:bg-slate-800 dark:hover:bg-slate-700"><img src="images/Company imgs/client-7.webp" alt="Happy Coding placement partner — top MNC collaborator 7" class="max-h-14 object-contain opacity-70 hover:opacity-100 dark:opacity-90 transition"></div>
+                    <div class="flex items-center justify-center h-20 rounded-xl bg-slate-50 hover:bg-indigo-50 transition dark:bg-slate-800 dark:hover:bg-slate-700"><img src="images/Company imgs/client-8.webp" alt="Happy Coding placement partner — top MNC collaborator 8" class="max-h-14 object-contain opacity-70 hover:opacity-100 dark:opacity-90 transition"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 bg-slate-50 dark:bg-slate-800">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-2">F.A.Q</h2>
+                    <p class="text-slate-500 dark:text-slate-300">Frequently Asked Questions</p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-6 lg:gap-10">
+                    <div class="space-y-4">
+                        <details class="faq-item bg-white rounded-xl p-5 shadow-sm border border-gray-100 group dark:bg-slate-800 dark:border-slate-700">
+                            <summary class="faq-question w-full flex items-center justify-between gap-4 text-left list-none cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 rounded">
+                                <span class="font-semibold text-slate-900 dark:text-white">How can I enroll in a course?</span>
+                                <span class="text-purple-600 transition-transform group-open:rotate-180">▼</span>
+                            </summary>
+                            <div class="faq-answer pt-3 pb-1 text-slate-500 text-sm leading-relaxed">
+                                You can enroll by visiting our campus or registering online through our website. Our team will guide you through the process.
+                            </div>
+                        </details>
+                        <details class="faq-item bg-white rounded-xl p-5 shadow-sm border border-gray-100 group dark:bg-slate-800 dark:border-slate-700">
+                            <summary class="faq-question w-full flex items-center justify-between gap-4 text-left list-none cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 rounded">
+                                <span class="font-semibold text-slate-900 dark:text-white">What is the duration of the courses?</span>
+                                <span class="text-purple-600 transition-transform group-open:rotate-180">▼</span>
+                            </summary>
+                            <div class="faq-answer pt-3 pb-1 text-slate-500 text-sm leading-relaxed">
+                                Course duration varies from 3 months to 12 months depending on the program. We offer both short-term certification courses and comprehensive diploma programs.
+                            </div>
+                        </details>
+                        <details class="faq-item bg-white rounded-xl p-5 shadow-sm border border-gray-100 group dark:bg-slate-800 dark:border-slate-700">
+                            <summary class="faq-question w-full flex items-center justify-between gap-4 text-left list-none cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 rounded">
+                                <span class="font-semibold text-slate-900 dark:text-white">Do you provide placement assistance?</span>
+                                <span class="text-purple-600 transition-transform group-open:rotate-180">▼</span>
+                            </summary>
+                            <div class="faq-answer pt-3 pb-1 text-slate-500 text-sm leading-relaxed">
+                                Yes, we provide 100% placement assistance to all our students. We have tie-ups with top companies and organize campus interviews regularly.
+                            </div>
+                        </details>
+                        <details class="faq-item bg-white rounded-xl p-5 shadow-sm border border-gray-100 group dark:bg-slate-800 dark:border-slate-700">
+                            <summary class="faq-question w-full flex items-center justify-between gap-4 text-left list-none cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 rounded">
+                                <span class="font-semibold text-slate-900 dark:text-white">Can I pay the fees in installments?</span>
+                                <span class="text-purple-600 transition-transform group-open:rotate-180">▼</span>
+                            </summary>
+                            <div class="faq-answer pt-3 pb-1 text-slate-500 text-sm leading-relaxed">
+                                Yes, we offer flexible payment options. You can pay in monthly installments without any extra charges. Contact our team for customized plans.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="space-y-4">
+                        <details class="faq-item bg-white rounded-xl p-5 shadow-sm border border-gray-100 group dark:bg-slate-800 dark:border-slate-700">
+                            <summary class="faq-question w-full flex items-center justify-between gap-4 text-left list-none cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 rounded">
+                                <span class="font-semibold text-slate-900 dark:text-white">Are the certificates recognized?</span>
+                                <span class="text-purple-600 transition-transform group-open:rotate-180">▼</span>
+                            </summary>
+                            <div class="faq-answer pt-3 pb-1 text-slate-500 text-sm leading-relaxed">
+                                All our certificates are industry-recognized and valid across India. We are a registered training institute with government accreditation.
+                            </div>
+                        </details>
+                        <details class="faq-item bg-white rounded-xl p-5 shadow-sm border border-gray-100 group dark:bg-slate-800 dark:border-slate-700">
+                            <summary class="faq-question w-full flex items-center justify-between gap-4 text-left list-none cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 rounded">
+                                <span class="font-semibold text-slate-900 dark:text-white">Do you offer online classes?</span>
+                                <span class="text-purple-600 transition-transform group-open:rotate-180">▼</span>
+                            </summary>
+                            <div class="faq-answer pt-3 pb-1 text-slate-500 text-sm leading-relaxed">
+                                Yes, we offer both online and offline classes. Our online classes are live and interactive, with recorded sessions available for revision.
+                            </div>
+                        </details>
+                        <details class="faq-item bg-white rounded-xl p-5 shadow-sm border border-gray-100 group dark:bg-slate-800 dark:border-slate-700">
+                            <summary class="faq-question w-full flex items-center justify-between gap-4 text-left list-none cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 rounded">
+                                <span class="font-semibold text-slate-900 dark:text-white">What if I miss a class?</span>
+                                <span class="text-purple-600 transition-transform group-open:rotate-180">▼</span>
+                            </summary>
+                            <div class="faq-answer pt-3 pb-1 text-slate-500 text-sm leading-relaxed">
+                                No worries! All classes are recorded and available in your student portal. You can also attend backup sessions or get personal doubt clearing.
+                            </div>
+                        </details>
+                        <details class="faq-item bg-white rounded-xl p-5 shadow-sm border border-gray-100 group dark:bg-slate-800 dark:border-slate-700">
+                            <summary class="faq-question w-full flex items-center justify-between gap-4 text-left list-none cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 rounded">
+                                <span class="font-semibold text-slate-900 dark:text-white">Is there any scholarship available?</span>
+                                <span class="text-purple-600 transition-transform group-open:rotate-180">▼</span>
+                            </summary>
+                            <div class="faq-answer pt-3 pb-1 text-slate-500 text-sm leading-relaxed">
+                                Yes, we offer merit-based scholarships up to 50% off for deserving students. We also have special discounts for early enrollments.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 bg-white dark:bg-slate-900">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-2">Pricing</h2>
+                    <p class="text-slate-500 dark:text-slate-300">Check Our Affordable Pricing</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+
+                    <!-- Basic -->
+                    <article class="bg-white rounded-3xl shadow-md border border-gray-100 p-8 flex flex-col dark:bg-slate-800 dark:border-slate-700">
+                        <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-1">Basic</h3>
+                        <p class="text-slate-500 dark:text-slate-300 text-sm mb-4">Ideal for freshers getting started</p>
+                        <div class="flex items-baseline gap-1 mb-1">
+                            <span class="text-5xl font-display font-extrabold text-slate-900 dark:text-white">₹5,000</span>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-300 text-sm mb-6">3 months</p>
+                        <ul class="space-y-3 flex-1 text-sm">
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Group batch</span></li>
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Recorded lectures</span></li>
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Weekly assignments</span></li>
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Community access</span></li>
+                        </ul>
+                        <a href="contact.html#enroll-form" class="mt-auto inline-flex items-center justify-center w-full h-12 rounded-xl border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-600/30 transition dark:border-purple-400 dark:text-purple-400 dark:hover:bg-purple-600 dark:hover:text-white mt-8">
+                            Enroll Now
+                        </a>
+                    </article>
+
+                    <!-- Standard (featured) -->
+                    <article class="rounded-3xl shadow-xl p-[1.5px] bg-gradient-to-br from-blue-600 via-purple-600 to-slate-900 relative z-10 -translate-y-2">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold shadow-lg">MOST POPULAR</div>
+                        <div class="bg-white rounded-3xl p-8 h-full flex flex-col dark:bg-slate-800">
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-1">Standard</h3>
+                            <p class="text-slate-500 dark:text-slate-300 text-sm mb-4">Best for career-focused learners</p>
+                            <div class="flex items-baseline gap-1 mb-1">
+                                <span class="text-5xl font-display font-extrabold text-slate-900 dark:text-white">₹12,000</span>
+                            </div>
+                            <p class="text-slate-500 dark:text-slate-300 text-sm mb-6">4 months</p>
+                            <ul class="space-y-3 flex-1 text-sm">
+                                <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Basic + live classes</span></li>
+                                <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">2 projects</span></li>
+                                <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Doubt sessions</span></li>
+                                <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Certificate</span></li>
+                            </ul>
+                            <a href="contact.html#enroll-form" class="mt-auto inline-flex items-center justify-center w-full h-12 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 transition mt-8">
+                                Enroll Now
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Premium -->
+                    <article class="bg-white rounded-3xl shadow-md border border-gray-100 p-8 flex flex-col dark:bg-slate-800 dark:border-slate-700">
+                        <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-1">Premium</h3>
+                        <p class="text-slate-500 dark:text-slate-300 text-sm mb-4">All-in-one with placement support</p>
+                        <div class="flex items-baseline gap-1 mb-1">
+                            <span class="text-5xl font-display font-extrabold text-slate-900 dark:text-white">₹20,000</span>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-300 text-sm mb-6">6 months</p>
+                        <ul class="space-y-3 flex-1 text-sm">
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Standard + 1-on-1 mentoring</span></li>
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">4 projects</span></li>
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Mock interviews</span></li>
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Placement support</span></li>
+                        </ul>
+                        <a href="contact.html#enroll-form" class="mt-auto inline-flex items-center justify-center w-full h-12 rounded-xl border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-600/30 transition dark:border-purple-400 dark:text-purple-400 dark:hover:bg-purple-600 dark:hover:text-white mt-8">
+                            Enroll Now
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 bg-slate-50 dark:bg-slate-800">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+                <article class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col gap-6 dark:bg-slate-800 dark:border-slate-700">
+                    <h3 class="font-display text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white">Contact Info</h3>
+                    <p class="text-slate-500 dark:text-slate-300 leading-relaxed">Feel free to reach out to us with any questions about our programs, admission process, or upcoming batches.</p>
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-4">
+                            <div class="shrink-0 w-12 h-12 rounded-xl bg-blue-600/10 text-blue-600 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="22" viewBox="0 -960 960 960" width="22" fill="currentColor"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 86Q296-336 228-452.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-68 216.5T480-100Zm0-480Z"/></svg>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold uppercase text-slate-500 dark:text-slate-300 tracking-wide">Our Location</span>
+                                <p class="mt-1 font-semibold text-slate-900 leading-relaxed dark:text-white">JLN Marg, Near GT Bazaar<br>Jaipur, Rajasthan 302001</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="shrink-0 w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="22" viewBox="0 -960 960 960" width="22" fill="currentColor"><path d="M240-40q-33 0-56.5-23.5T160-120v-690q0-33 23.5-56.5T240-890h188l80 80h212q33 0 56.5 23.5T800-730v610q0 33-23.5 56.5T720-40H240Zm0-80h480v-610H460l-80-80H240v690Z"/></svg>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold uppercase text-slate-500 dark:text-slate-300 tracking-wide">Phone Number</span>
+                                <p class="mt-1 font-semibold text-slate-900 leading-relaxed dark:text-white">+91 98290 12345<br>+91 98765 43210</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="shrink-0 w-12 h-12 rounded-xl bg-purple-600/10 text-purple-600 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="22" viewBox="0 -960 960 960" width="22" fill="currentColor"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-644v-76l320 140 320-140v76L480-440ZM160-566v326h640v-326L480-420 160-566Z"/></svg>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold uppercase text-slate-500 dark:text-slate-300 tracking-wide">Email Address</span>
+                                <p class="mt-1 font-semibold text-slate-900 leading-relaxed dark:text-white">hello@happycoding.in<br>support@happycoding.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col gap-6 dark:bg-slate-800 dark:border-slate-700">
+                    <h3 class="font-display text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white">Get In Touch</h3>
+                    <p class="text-slate-500 dark:text-slate-300 leading-relaxed">Share your query and our team will get back to you within 24 hours with the right guidance.</p>
+                    <form action="mailto:hello@happycoding.in" method="POST" enctype="text/plain" class="space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="contact-name" class="block text-sm font-semibold text-slate-700 mb-1.5 dark:text-slate-300">Full Name</label>
+                                <input type="text" id="contact-name" name="name" placeholder="Your name" required class="w-full h-11 px-4 rounded-lg border border-gray-200 focus:border-blue-600 focus:ring-4 focus:ring-blue-600/20 outline-none dark:bg-slate-700 dark:border-slate-600 dark:text-white dark:placeholder:text-slate-400">
+                            </div>
+                            <div>
+                                <label for="contact-email" class="block text-sm font-semibold text-slate-700 mb-1.5 dark:text-slate-300">Email Address</label>
+                                <input type="email" id="contact-email" name="email" placeholder="you@example.com" required class="w-full h-11 px-4 rounded-lg border border-gray-200 focus:border-blue-600 focus:ring-4 focus:ring-blue-600/20 outline-none dark:bg-slate-700 dark:border-slate-600 dark:text-white dark:placeholder:text-slate-400">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="contact-phone" class="block text-sm font-semibold text-slate-700 mb-1.5 dark:text-slate-300">Phone Number</label>
+                            <input type="tel" id="contact-phone" name="phone" placeholder="+91 98XXX XXXXX" required class="w-full h-11 px-4 rounded-lg border border-gray-200 focus:border-blue-600 focus:ring-4 focus:ring-blue-600/20 outline-none dark:bg-slate-700 dark:border-slate-600 dark:text-white dark:placeholder:text-slate-400">
+                        </div>
+                        <div>
+                            <label for="contact-subject" class="block text-sm font-semibold text-slate-700 mb-1.5 dark:text-slate-300">Subject</label>
+                            <select id="contact-subject" name="subject" class="w-full h-11 px-4 rounded-lg border border-gray-200 focus:border-blue-600 focus:ring-4 focus:ring-blue-600/20 outline-none bg-white dark:bg-slate-700 dark:border-slate-600 dark:text-white">
+                                <option>Course Enquiry</option>
+                                <option>Admission Process</option>
+                                <option>Fees Structure</option>
+                                <option>Placement Query</option>
+                                <option>General Support</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="contact-message" class="block text-sm font-semibold text-slate-700 mb-1.5 dark:text-slate-300">Message</label>
+                            <textarea id="contact-message" name="message" rows="4" placeholder="Write your message..." class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-600 focus:ring-4 focus:ring-blue-600/20 outline-none resize-none dark:bg-slate-700 dark:border-slate-600 dark:text-white dark:placeholder:text-slate-400"></textarea>
+                        </div>
+                        <button type="submit" class="w-full h-12 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 transition">Send Message</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gradient-to-b from-slate-800 to-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-10">
+                <div>
+                    <h3 class="font-display font-bold text-lg mb-4 text-white">Top Products</h3>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li><a class="hover:text-white transition" href="#">Managed Website</a></li>
+                        <li><a class="hover:text-white transition" href="#">Manage Reputation</a></li>
+                        <li><a class="hover:text-white transition" href="#">Power Tools</a></li>
+                        <li><a class="hover:text-white transition" href="#">Marketing Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-display font-bold text-lg mb-4 text-white">Quick Links</h3>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li><a class="hover:text-white transition" href="#">Jobs</a></li>
+                        <li><a class="hover:text-white transition" href="#">Brand Assets</a></li>
+                        <li><a class="hover:text-white transition" href="#">Investor Relations</a></li>
+                        <li><a class="hover:text-white transition" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-display font-bold text-lg mb-4 text-white">Features</h3>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li><a class="hover:text-white transition" href="#">Jobs</a></li>
+                        <li><a class="hover:text-white transition" href="#">Brand Assets</a></li>
+                        <li><a class="hover:text-white transition" href="#">Investor Relations</a></li>
+                        <li><a class="hover:text-white transition" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-display font-bold text-lg mb-4 text-white">Resources</h3>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li><a class="hover:text-white transition" href="#">Guides</a></li>
+                        <li><a class="hover:text-white transition" href="#">Research</a></li>
+                        <li><a class="hover:text-white transition" href="#">Experts</a></li>
+                        <li><a class="hover:text-white transition" href="#">Agencies</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-1">
+                    <h3 class="font-display font-bold text-lg mb-4 text-white">Newsletter</h3>
+                    <p class="text-white/70 text-sm mb-4 leading-relaxed">Get updates on new batches, early-bird offers and course announcements.</p>
+                    <form action="mailto:hello@happycoding.in?subject=Newsletter%20Subscription" method="POST" enctype="text/plain" class="flex flex-col gap-3">
+                        <label for="newsletter-email" class="sr-only">Email Address</label>
+                        <input id="newsletter-email" name="newsletter-email" type="email" placeholder="Your Email Address" required class="h-11 px-4 rounded-lg bg-white/10 border border-white/15 text-white placeholder:text-white/50 focus:border-purple-600 focus:ring-4 focus:ring-purple-600/30 outline-none">
+                        <button type="submit" class="h-11 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/30 transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-white/70 text-sm">© Happy Coding ♥ — Jaipur's #1 Coding Institute</p>
+                <div class="flex items-center gap-3 text-white/70">
+                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white transition" aria-label="Facebook">f</a>
+                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white transition" aria-label="Twitter">𝕏</a>
+                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white transition" aria-label="Instagram">◉</a>
+                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white transition" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top (pure HTML anchor, zero JS) -->
+    <a href="#top" class="scrollToTop fixed bottom-6 right-6 w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg inline-flex items-center justify-center hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 transition" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" height="22" viewBox="0 -960 960 960" width="22" fill="currentColor"><path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/></svg>
+    </a>
+
+</body>
+
+</html>

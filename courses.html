@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Coding — Our Courses</title>
+    <link rel="shortcut icon" href="images/image-removebg-preview (3).webp">
+
+    <!--
+        Tailwind CDN: framework hai, JS logic nahi.
+        Custom config script zaruri hai custom colors ke liye.
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* font-display utility — Nunito (headings/brand text) */
+        .font-display { font-family: 'Nunito', Inter, ui-sans-serif, system-ui, sans-serif; }
+        /* font-sans utility — Inter (body text) */
+        body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+    </style>
+</head>
+
+<body id="top" class="bg-white text-slate-700 font-sans antialiased dark:bg-slate-900 dark:text-slate-200">
+
+    <div class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur border-b border-gray-100 dark:bg-slate-900/90 dark:border-slate-700">
+        <header class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 h-16 lg:h-20 flex items-center justify-between">
+
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <img src="images/image-removebg-preview (1).webp" alt="Happy Coding institute logo — computer coaching in Jaipur" class="w-[4.5rem] h-[4.5rem] object-contain">
+                <a href="index.html" class="font-display text-xl font-extrabold text-slate-900 hover:text-purple-600 transition-colors dark:text-white">Happy Coding</a>
+            </div>
+
+            <!-- Desktop nav -->
+            <nav class="hidden lg:flex items-center" aria-label="Main navigation">
+                <ul class="flex items-center gap-8">
+                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 transition dark:text-slate-300 dark:hover:text-purple-400" href="index.html">Home</a></li>
+                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 transition dark:text-slate-300 dark:hover:text-purple-400" href="about.html">About</a></li>
+                    <li><a class="font-semibold text-purple-600 border-b-2 border-purple-600 pb-1 dark:text-purple-400 dark:border-purple-400" href="courses.html">Courses</a></li>
+                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 transition dark:text-slate-300 dark:hover:text-purple-400" href="gallery.html">Gallery</a></li>
+                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 transition dark:text-slate-300 dark:hover:text-purple-400" href="pricing.html">Pricing</a></li>
+                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 transition dark:text-slate-300 dark:hover:text-purple-400" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Desktop CTA -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="contact.html#enroll-form" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-md hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 transition">
+                    Enroll Now
+                </a>
+            </div>
+
+            <!-- Hamburger icon — label for checkbox -->
+            <label for="nav-toggle" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg text-purple-600 hover:bg-indigo-50 cursor-pointer" aria-label="Toggle navigation menu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </label>
+        </header>
+
+        <!-- Checkbox — hidden, peer class se mobile nav control hoti hai -->
+        <input type="checkbox" id="nav-toggle" class="hidden peer/nav">
+
+        <!-- Mobile nav — peer-checked/nav:block se dikhta hai -->
+        <nav class="lg:hidden hidden peer-checked/nav:block bg-white border-t border-gray-100 shadow-lg dark:bg-slate-900 dark:border-slate-700" aria-label="Mobile navigation">
+            <ul class="flex flex-col px-4 py-4 gap-1">
+                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800" href="index.html">Home</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800" href="about.html">About</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-purple-600 bg-indigo-50 rounded-lg dark:text-purple-400 dark:bg-slate-800" href="courses.html">Courses</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800" href="gallery.html">Gallery</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800" href="pricing.html">Pricing</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800" href="contact.html">Contact</a></li>
+                <li class="pt-2">
+                    <a href="contact.html#enroll-form" class="block text-center py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 transition">Enroll Now</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="pt-16 lg:pt-20">
+
+        <!-- PAGE HERO / BREADCRUMB -->
+        <section class="bg-gradient-to-br from-indigo-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-20 text-center">
+                <h1 class="font-display text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-3">Our Courses</h1>
+                <p class="text-slate-500 dark:text-slate-300 text-lg max-w-2xl mx-auto mb-8">Choose from industry-aligned certification &amp; diploma programs. 100% practical training + live projects + placement support.</p>
+                <nav aria-label="Breadcrumb" class="inline-flex items-center gap-2 text-sm">
+                    <a class="text-purple-600 font-semibold hover:underline" href="index.html">Home</a>
+                    <span class="text-slate-500 dark:text-slate-300">/</span>
+                    <span class="text-slate-700 dark:text-slate-300 font-semibold">Courses</span>
+                </nav>
+            </div>
+        </section>
+
+        <section class="py-14 md:py-20 dark:bg-slate-900">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-2">Explore Our Programs</h2>
+                    <p class="text-slate-500 dark:text-slate-300">Certifications designed to make you job-ready in minimum time</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Web Designing -->
+                    <article class="course-card group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition flex flex-col dark:bg-slate-800 dark:border-slate-700">
+                        <div class="h-44 overflow-hidden bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center relative cursor-pointer">
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300"></div>
+                            <div class="flex flex-col items-center gap-3 z-10">
+                                <div class="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/30 transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 -960 960 960" width="36" fill="white"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm160-40-56-56 103-104-103-104 56-56 160 160-160 160Zm160 0v-80h200v80H480Z"/></svg>
+                                </div>
+                                <span class="text-white font-display font-bold text-base tracking-wide opacity-0 group-hover:opacity-100 transition duration-300 translate-y-2 group-hover:translate-y-0">Web Designing</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col dark:bg-slate-800">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-bold text-white bg-blue-600 px-3 py-1 rounded-full">4 Months</span>
+                                <span class="font-display text-xl font-extrabold text-slate-900 dark:text-white">₹15,000</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-2">Web Designing</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-300 leading-relaxed mb-4 flex-1">Learn HTML5, CSS3, Tailwind CSS, Bootstrap, Figma UI/UX, responsive web design + 3 live projects.</p>
+                            <ul class="text-sm text-slate-500 dark:text-slate-300 space-y-1.5 mb-5">
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>HTML5 + CSS3 + Tailwind CSS</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Figma UI/UX Design</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>3 Live Projects</li>
+                            </ul>
+                            <a href="contact.html#enroll-form" class="know-more-btn inline-flex items-center justify-center w-full h-11 rounded-lg border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-600/30 transition">
+                                Know More →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Web Development -->
+                    <article class="course-card group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition flex flex-col dark:bg-slate-800 dark:border-slate-700">
+                        <div class="h-44 overflow-hidden bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center relative cursor-pointer">
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300"></div>
+                            <div class="flex flex-col items-center gap-3 z-10">
+                                <div class="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/30 transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 -960 960 960" width="36" fill="white"><path d="M320-240 80-480l240-240 57 57-184 183 184 183-57 57Zm320 0-57-57 184-183-184-183 57-57 240 240-240 240Z"/></svg>
+                                </div>
+                                <span class="text-white font-display font-bold text-base tracking-wide opacity-0 group-hover:opacity-100 transition duration-300 translate-y-2 group-hover:translate-y-0">Web Development</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col dark:bg-slate-800">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-bold text-white bg-purple-600 px-3 py-1 rounded-full">6 Months</span>
+                                <span class="font-display text-xl font-extrabold text-slate-900 dark:text-white">₹28,000</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-2">Web Development</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-300 leading-relaxed mb-4 flex-1">Full-stack training: JS, React, Node, Express, MongoDB, REST API, deploy on Vercel/Netlify, capstone e-commerce project.</p>
+                            <ul class="text-sm text-slate-500 dark:text-slate-300 space-y-1.5 mb-5">
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>JavaScript + React JS</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Node JS + Express + MongoDB</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Capstone E-Commerce Project</li>
+                            </ul>
+                            <a href="contact.html#enroll-form" class="know-more-btn inline-flex items-center justify-center w-full h-11 rounded-lg border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-600/30 transition">
+                                Know More →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Graphic Designing -->
+                    <article class="course-card group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition flex flex-col dark:bg-slate-800 dark:border-slate-700">
+                        <div class="h-44 overflow-hidden bg-gradient-to-br from-pink-500 to-orange-400 flex items-center justify-center relative cursor-pointer">
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300"></div>
+                            <div class="flex flex-col items-center gap-3 z-10">
+                                <div class="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/30 transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 -960 960 960" width="36" fill="white"><path d="M480-80q-82 0-155-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-160q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Z"/></svg>
+                                </div>
+                                <span class="text-white font-display font-bold text-base tracking-wide opacity-0 group-hover:opacity-100 transition duration-300 translate-y-2 group-hover:translate-y-0">Graphic Designing</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col dark:bg-slate-800">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-bold text-white bg-pink-500 px-3 py-1 rounded-full">3 Months</span>
+                                <span class="font-display text-xl font-extrabold text-slate-900 dark:text-white">₹12,000</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-2">Graphic Designing</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-300 leading-relaxed mb-4 flex-1">Photoshop, CorelDRAW, Illustrator, Canva, logo, poster, banner, social media, business card, brochure design + portfolio.</p>
+                            <ul class="text-sm text-slate-500 dark:text-slate-300 space-y-1.5 mb-5">
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Photoshop + Illustrator + CorelDRAW</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Logo + Poster + Brochure Design</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Complete Portfolio Build</li>
+                            </ul>
+                            <a href="contact.html#enroll-form" class="know-more-btn inline-flex items-center justify-center w-full h-11 rounded-lg border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-600/30 transition">
+                                Know More →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- E-Commerce Development -->
+                    <article class="course-card group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition flex flex-col dark:bg-slate-800 dark:border-slate-700">
+                        <div class="h-44 overflow-hidden bg-gradient-to-br from-orange-400 to-yellow-400 flex items-center justify-center relative cursor-pointer">
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300"></div>
+                            <div class="flex flex-col items-center gap-3 z-10">
+                                <div class="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/30 transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 -960 960 960" width="36" fill="white"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z"/></svg>
+                                </div>
+                                <span class="text-white font-display font-bold text-base tracking-wide opacity-0 group-hover:opacity-100 transition duration-300 translate-y-2 group-hover:translate-y-0">E-Commerce Dev</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col dark:bg-slate-800">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-bold text-white bg-orange-500 px-3 py-1 rounded-full">3 Months</span>
+                                <span class="font-display text-xl font-extrabold text-slate-900 dark:text-white">₹18,000</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-2">E-Commerce Development</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-300 leading-relaxed mb-4 flex-1">Build &amp; launch online stores using WordPress + WooCommerce or Shopify. Payment gateways, shipping, inventory management covered.</p>
+                            <ul class="text-sm text-slate-500 dark:text-slate-300 space-y-1.5 mb-5">
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>WordPress + WooCommerce</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Payment Gateway + Shipping Setup</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Launch Live Store</li>
+                            </ul>
+                            <a href="contact.html#enroll-form" class="know-more-btn inline-flex items-center justify-center w-full h-11 rounded-lg border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-600/30 transition">
+                                Know More →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- SEO -->
+                    <article class="course-card group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition flex flex-col dark:bg-slate-800 dark:border-slate-700">
+                        <div class="h-44 overflow-hidden bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center relative cursor-pointer">
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300"></div>
+                            <div class="flex flex-col items-center gap-3 z-10">
+                                <div class="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/30 transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 -960 960 960" width="36" fill="white"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                                </div>
+                                <span class="text-white font-display font-bold text-base tracking-wide opacity-0 group-hover:opacity-100 transition duration-300 translate-y-2 group-hover:translate-y-0">SEO Mastery</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col dark:bg-slate-800">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-bold text-white bg-emerald-500 px-3 py-1 rounded-full">2 Months</span>
+                                <span class="font-display text-xl font-extrabold text-slate-900 dark:text-white">₹10,000</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-2">SEO (Search Engine Optimization)</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-300 leading-relaxed mb-4 flex-1">Rank #1 on Google. On-page + Off-page SEO, keyword research, Google Search Console, Ahrefs, backlinks, local SEO.</p>
+                            <ul class="text-sm text-slate-500 dark:text-slate-300 space-y-1.5 mb-5">
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>On-Page + Off-Page SEO</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>GSC + Ahrefs Tools</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Live Client Project Practice</li>
+                            </ul>
+                            <a href="contact.html#enroll-form" class="know-more-btn inline-flex items-center justify-center w-full h-11 rounded-lg border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-600/30 transition">
+                                Know More →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Digital Marketing -->
+                    <article class="course-card group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition flex flex-col dark:bg-slate-800 dark:border-slate-700">
+                        <div class="h-44 overflow-hidden bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center relative cursor-pointer">
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300"></div>
+                            <div class="flex flex-col items-center gap-3 z-10">
+                                <div class="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/30 transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 -960 960 960" width="36" fill="white"><path d="M200-160q-33 0-56.5-23.5T120-240v-560q0-33 23.5-56.5T200-880h560q33 0 56.5 23.5T840-800v560q0 33-23.5 56.5T760-160H200Zm0-80h560v-480H200v480Zm80-80v-80h400v80H280Zm0-160v-80h400v80H280Zm-80-160v-80h560v80H200Z"/></svg>
+                                </div>
+                                <span class="text-white font-display font-bold text-base tracking-wide opacity-0 group-hover:opacity-100 transition duration-300 translate-y-2 group-hover:translate-y-0">Digital Marketing</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col dark:bg-slate-800">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-bold text-white bg-sky-500 px-3 py-1 rounded-full">4 Months</span>
+                                <span class="font-display text-xl font-extrabold text-slate-900 dark:text-white">₹22,000</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-2">Digital Marketing</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-300 leading-relaxed mb-4 flex-1">Complete 360° digital marketing: SEO, SMO, PPC, Google Ads, Facebook/Instagram Ads, content strategy, analytics + Google certificates.</p>
+                            <ul class="text-sm text-slate-500 dark:text-slate-300 space-y-1.5 mb-5">
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>SEO + SMO + SEM</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Google Ads + Meta Ads Live Campaigns</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Google Analytics Certified</li>
+                            </ul>
+                            <a href="contact.html#enroll-form" class="know-more-btn inline-flex items-center justify-center w-full h-11 rounded-lg border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-600/30 transition">
+                                Know More →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- MS Word -->
+                    <article class="course-card group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition flex flex-col dark:bg-slate-800 dark:border-slate-700">
+                        <div class="h-44 overflow-hidden bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center relative cursor-pointer">
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300"></div>
+                            <div class="flex flex-col items-center gap-3 z-10">
+                                <div class="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/30 transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 -960 960 960" width="36" fill="white"><path d="M240-280h360v-80H240v80Zm0-160h480v-80H240v80Zm0-160h480v-80H240v80Zm-80 480q-33 0-56.5-23.5T80-200v-560q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v560q0 33-23.5 56.5T800-120H160Zm0-80h640v-560H160v560Z"/></svg>
+                                </div>
+                                <span class="text-white font-display font-bold text-base tracking-wide opacity-0 group-hover:opacity-100 transition duration-300 translate-y-2 group-hover:translate-y-0">MS Word</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col dark:bg-slate-800">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-bold text-white bg-violet-600 px-3 py-1 rounded-full">1 Month</span>
+                                <span class="font-display text-xl font-extrabold text-slate-900 dark:text-white">₹3,000</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-2">MS Word</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-300 leading-relaxed mb-4 flex-1">Microsoft Word complete from basics to advanced: formatting, styles, mail merge, tables, TOC, macros, templates, resume/letter making.</p>
+                            <ul class="text-sm text-slate-500 dark:text-slate-300 space-y-1.5 mb-5">
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Formatting + Styles + TOC</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Mail Merge + Tables + Macros</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Resume &amp; Letter Templates</li>
+                            </ul>
+                            <a href="contact.html#enroll-form" class="know-more-btn inline-flex items-center justify-center w-full h-11 rounded-lg border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-600/30 transition">
+                                Know More →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Tally Prime + GST -->
+                    <article class="course-card group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition flex flex-col dark:bg-slate-800 dark:border-slate-700">
+                        <div class="h-44 overflow-hidden bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center relative cursor-pointer">
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300"></div>
+                            <div class="flex flex-col items-center gap-3 z-10">
+                                <div class="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/30 transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 -960 960 960" width="36" fill="white"><path d="M444-200h70v-50q50-9 86-39t36-89q0-42-24-77t-96-61q-60-20-83-35t-23-41q0-26 18.5-41t53.5-15q32 0 50 15.5t26 38.5l64-26q-11-35-36.5-61T516-710v-50h-70v50q-50 11-78 44t-28 74q0 47 27.5 76t86.5 50q63 23 87.5 41t24.5 47q0 33-22.5 54T480-304q-33 0-58.5-20.5T386-376l-66 26q14 48 43.5 77.5T444-234v34Z"/></svg>
+                                </div>
+                                <span class="text-white font-display font-bold text-base tracking-wide opacity-0 group-hover:opacity-100 transition duration-300 translate-y-2 group-hover:translate-y-0">Tally + GST</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col dark:bg-slate-800">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-bold text-white bg-green-500 px-3 py-1 rounded-full">2 Months</span>
+                                <span class="font-display text-xl font-extrabold text-slate-900 dark:text-white">₹7,000</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-2">Tally Prime + GST</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-300 leading-relaxed mb-4 flex-1">Accounting with Tally Prime: ledgers, vouchers, inventory, GST (GSTR-1/3B), invoicing, balance sheet, profit &amp; loss, payroll.</p>
+                            <ul class="text-sm text-slate-500 dark:text-slate-300 space-y-1.5 mb-5">
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Tally Prime Full Course</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>GST (GSTR-1 / GSTR-3B) Filing</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Balance Sheet + P&amp;L Reports</li>
+                            </ul>
+                            <a href="contact.html#enroll-form" class="know-more-btn inline-flex items-center justify-center w-full h-11 rounded-lg border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-600/30 transition">
+                                Know More →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- MS Excel -->
+                    <article class="course-card group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition flex flex-col dark:bg-slate-800 dark:border-slate-700">
+                        <div class="h-44 overflow-hidden bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center relative cursor-pointer">
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300"></div>
+                            <div class="flex flex-col items-center gap-3 z-10">
+                                <div class="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/30 transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 -960 960 960" width="36" fill="white"><path d="M120-120v-720h720v720H120Zm80-80h240v-160H200v160Zm0-240h240v-160H200v160Zm0-240h240v-160H200v160Zm320 480h240v-160H520v160Zm0-240h240v-160H520v160Zm0-240h240v-160H520v160Z"/></svg>
+                                </div>
+                                <span class="text-white font-display font-bold text-base tracking-wide opacity-0 group-hover:opacity-100 transition duration-300 translate-y-2 group-hover:translate-y-0">MS Excel</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col dark:bg-slate-800">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-bold text-white bg-emerald-500 px-3 py-1 rounded-full">1.5 Months</span>
+                                <span class="font-display text-xl font-extrabold text-slate-900 dark:text-white">₹4,500</span>
+                            </div>
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-2">MS Excel</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-300 leading-relaxed mb-4 flex-1">Advanced Excel: formulas, VLOOKUP/XLOOKUP, Pivot Table, charts, conditional formatting, macros, MIS, data analysis &amp; dashboard.</p>
+                            <ul class="text-sm text-slate-500 dark:text-slate-300 space-y-1.5 mb-5">
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>50+ Formulas + VLOOKUP / XLOOKUP</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>Pivot Table + Slicer + Charts</li>
+                                <li class="flex items-center gap-2"><svg class="text-emerald-500 shrink-0" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg>MIS Dashboard Project</li>
+                            </ul>
+                            <a href="contact.html#enroll-form" class="know-more-btn inline-flex items-center justify-center w-full h-11 rounded-lg border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-600/30 transition">
+                                Know More →
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-14 md:py-20 bg-slate-50 dark:bg-slate-800">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <span class="font-bold text-blue-600 uppercase tracking-[2px] text-xs">Our Pricing</span>
+                    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mt-2 mb-2">Flexible Pricing Plans</h2>
+                    <p class="text-slate-500 dark:text-slate-300 max-w-2xl mx-auto">Choose the perfect plan for your goal. Easy EMI options available.</p>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+
+                    <!-- Basic -->
+                    <article class="bg-white rounded-3xl shadow-md border border-gray-100 p-8 flex flex-col dark:bg-slate-800 dark:border-slate-700">
+                        <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-1">Basic</h3>
+                        <p class="text-slate-500 dark:text-slate-300 text-sm mb-4">Ideal for freshers getting started</p>
+                        <div class="flex items-baseline gap-1 mb-1">
+                            <span class="text-5xl font-display font-extrabold text-slate-900 dark:text-white">₹5,000</span>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-300 text-sm mb-6">3 months</p>
+                        <ul class="space-y-3 flex-1 text-sm">
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Group batch</span></li>
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Recorded lectures</span></li>
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Weekly assignments</span></li>
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Community access</span></li>
+                        </ul>
+                        <a href="contact.html#enroll-form" class="mt-auto inline-flex items-center justify-center w-full h-12 rounded-xl border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-600/30 transition dark:border-purple-400 dark:text-purple-400 dark:hover:bg-purple-600 dark:hover:text-white mt-8">
+                            Enroll Now
+                        </a>
+                    </article>
+
+                    <!-- Standard (featured) -->
+                    <article class="rounded-3xl shadow-xl p-[1.5px] bg-gradient-to-br from-blue-600 via-purple-600 to-slate-900 relative z-10 -translate-y-2">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold shadow-lg">MOST POPULAR</div>
+                        <div class="bg-white rounded-3xl p-8 h-full flex flex-col dark:bg-slate-800">
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-1">Standard</h3>
+                            <p class="text-slate-500 dark:text-slate-300 text-sm mb-4">Best for career-focused learners</p>
+                            <div class="flex items-baseline gap-1 mb-1">
+                                <span class="text-5xl font-display font-extrabold text-slate-900 dark:text-white">₹12,000</span>
+                            </div>
+                            <p class="text-slate-500 dark:text-slate-300 text-sm mb-6">4 months</p>
+                            <ul class="space-y-3 flex-1 text-sm">
+                                <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Basic + live classes</span></li>
+                                <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">2 projects</span></li>
+                                <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Doubt sessions</span></li>
+                                <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Certificate</span></li>
+                            </ul>
+                            <a href="contact.html#enroll-form" class="mt-auto inline-flex items-center justify-center w-full h-12 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 transition mt-8">
+                                Enroll Now
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Premium -->
+                    <article class="bg-white rounded-3xl shadow-md border border-gray-100 p-8 flex flex-col dark:bg-slate-800 dark:border-slate-700">
+                        <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white mb-1">Premium</h3>
+                        <p class="text-slate-500 dark:text-slate-300 text-sm mb-4">All-in-one with placement support</p>
+                        <div class="flex items-baseline gap-1 mb-1">
+                            <span class="text-5xl font-display font-extrabold text-slate-900 dark:text-white">₹20,000</span>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-300 text-sm mb-6">6 months</p>
+                        <ul class="space-y-3 flex-1 text-sm">
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Standard + 1-on-1 mentoring</span></li>
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">4 projects</span></li>
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Mock interviews</span></li>
+                            <li class="flex items-start gap-3"><svg class="shrink-0 mt-0.5 text-emerald-500" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M382-240 154-468l57-56 171 171 367-367 57 56-424 424Z"/></svg><span class="text-slate-700 dark:text-slate-300">Placement support</span></li>
+                        </ul>
+                        <a href="contact.html#enroll-form" class="mt-auto inline-flex items-center justify-center w-full h-12 rounded-xl border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-600/30 transition dark:border-purple-400 dark:text-purple-400 dark:hover:bg-purple-600 dark:hover:text-white mt-8">
+                            Enroll Now
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gradient-to-b from-slate-800 to-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-10">
+                <div>
+                    <h3 class="font-display font-bold text-lg mb-4 text-white">Top Products</h3>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li><a class="hover:text-white transition" href="#">Managed Website</a></li>
+                        <li><a class="hover:text-white transition" href="#">Manage Reputation</a></li>
+                        <li><a class="hover:text-white transition" href="#">Power Tools</a></li>
+                        <li><a class="hover:text-white transition" href="#">Marketing Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-display font-bold text-lg mb-4 text-white">Quick Links</h3>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li><a class="hover:text-white transition" href="#">Jobs</a></li>
+                        <li><a class="hover:text-white transition" href="#">Brand Assets</a></li>
+                        <li><a class="hover:text-white transition" href="#">Investor Relations</a></li>
+                        <li><a class="hover:text-white transition" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-display font-bold text-lg mb-4 text-white">Features</h3>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li><a class="hover:text-white transition" href="#">Jobs</a></li>
+                        <li><a class="hover:text-white transition" href="#">Brand Assets</a></li>
+                        <li><a class="hover:text-white transition" href="#">Investor Relations</a></li>
+                        <li><a class="hover:text-white transition" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-display font-bold text-lg mb-4 text-white">Resources</h3>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li><a class="hover:text-white transition" href="#">Guides</a></li>
+                        <li><a class="hover:text-white transition" href="#">Research</a></li>
+                        <li><a class="hover:text-white transition" href="#">Experts</a></li>
+                        <li><a class="hover:text-white transition" href="#">Agencies</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-1">
+                    <h3 class="font-display font-bold text-lg mb-4 text-white">Newsletter</h3>
+                    <p class="text-white/70 text-sm mb-4 leading-relaxed">Get updates on new batches and offers.</p>
+                    <!--
+                        Newsletter: JS popup hata diya. Ab simple mailto: action form hai.
+                        Koi script nahi — browser email client kholega.
+                    -->
+                    <form action="mailto:hello@happycoding.in?subject=Newsletter%20Subscription" method="POST" enctype="text/plain" class="flex flex-col gap-3">
+                        <label for="newsletter-email" class="sr-only">Email Address</label>
+                        <input id="newsletter-email" name="newsletter-email" type="email" placeholder="Your Email Address" required class="h-11 px-4 rounded-lg bg-white/10 border border-white/15 text-white placeholder:text-white/50 focus:border-purple-600 focus:ring-4 focus:ring-purple-600/30 outline-none">
+                        <button type="submit" class="h-11 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/30 transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-white/70 text-sm">© Happy Coding ♥ — Jaipur's #1 Coding Institute</p>
+                <div class="flex items-center gap-3 text-white/70">
+                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white transition" aria-label="Facebook">f</a>
+                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white transition" aria-label="Twitter">𝕏</a>
+                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white transition" aria-label="Instagram">◉</a>
+                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white transition" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top (pure HTML anchor) -->
+    <a href="#top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg inline-flex items-center justify-center hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 transition" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" height="22" viewBox="0 -960 960 960" width="22" fill="currentColor"><path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/></svg>
+    </a>
+
+</body>
+</html>
