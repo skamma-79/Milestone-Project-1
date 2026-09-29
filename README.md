@@ -6,7 +6,7 @@
 
 ## Project Description
 
-Happy Coding is a computer coaching center based in Jaipur, Rajasthan. This website was built as a Milestone 1 project to represent a real-world local business online. It covers course listings, gallery, contact/enrollment, and pricing — all built with plain HTML and Tailwind CSS, no frameworks.
+Happy Coding is a computer coaching center based in Jaipur, Rajasthan. This website was built for Milestone 1, Option A — Local Business Website. It presents the coaching center's courses, gallery, and contact/enrollment information using Plain HTML and Tailwind CSS only.
 
 ---
 
@@ -14,32 +14,32 @@ Happy Coding is a computer coaching center based in Jaipur, Rajasthan. This webs
 
 | Page | File | Description |
 |------|------|-------------|
-| Home | `index.html` | Hero, highlights, Why Choose, testimonials, FAQ, pricing preview |
+| Home | `index.html` | Hero, highlights, Why Choose Happy Coding, and testimonials |
 | Courses | `courses.html` | 10 course cards (CSS Grid), pricing table Basic/Standard/Premium |
-| Gallery | `gallery.html` | Responsive image grid (auto-fit/minmax) — campus, workshops, placement partners |
-| Contact | `contact.html` | Enrollment form, address, Google Map embed, business hours |
+| Gallery | `gallery.html` | Responsive image grid for campus, classroom, and workshop images |
+| Contact / Enroll | `contact.html` | Enrollment form, address, Google Map embed, and business hours |
 
 ---
 
 ## Tech Used
 
-- **HTML5** — semantic tags (`header`, `nav`, `main`, `section`, `article`, `footer`)
-- **Tailwind CSS** (CDN) — utility-first styling, no build tool
-- **CSS Grid** — course cards, gallery grid
-- **Flexbox** — navbar, highlights strip, Why Choose section
-- **Dark Mode** — Tailwind `dark:` variants with `class` strategy
+- **Plain HTML** — semantic tags (`header`, `nav`, `main`, `section`, `article`, `footer`)
+- **Tailwind CSS** (CDN) — utility-first styling with no framework or build tool
+- **CSS Grid** — course cards and gallery grid
+- **Flexbox** — navigation, highlights strip, and Why Choose Happy Coding section
+- **Dark mode** — Tailwind `dark:` variants used across the pages
 
 ---
 
 ## Live Link
 
-> _Add Vercel / Netlify deployment link here after deploy_
+> _Add deployment URL after deployment_
 
 ---
 
 ## Screenshots
 
-> _Add screenshots after deployment_
+No standalone project screenshot files are currently available. Add screenshots here after they are created.
 
 ---
 
