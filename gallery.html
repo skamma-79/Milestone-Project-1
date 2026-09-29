@@ -13,6 +13,21 @@
         .font-display { font-family: 'Nunito', Inter, ui-sans-serif, system-ui, sans-serif; }
 
         body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+
+        /* Small motion polish for existing gallery cards and images */
+        .gallery-item,
+        .gallery-image { transition: transform 250ms ease, box-shadow 250ms ease; }
+
+        .gallery-item:hover { transform: translateY(-3px); }
+        .gallery-item:hover .gallery-image { transform: scale(1.04); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .gallery-item,
+            .gallery-item * { transition: none !important; }
+
+            .gallery-item:hover,
+            .gallery-item:hover .gallery-image { transform: none !important; }
+        }
     </style>
 </head>
 
@@ -91,7 +106,7 @@
                 <div class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-5 md:gap-6">
 
                     <a class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-md border border-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30" href="images/Gallary imges/unnamed.webp" target="_blank" rel="noopener noreferrer">
-                        <img src="images/Gallary imges/unnamed.webp" alt="Happy Coding campus life and student activities" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="images/Gallary imges/unnamed.webp" alt="Happy Coding campus life and student activities" class="gallery-image w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-5">
                             <h3 class="text-white font-display font-bold text-lg leading-tight">Campus Life</h3>
                             <p class="text-white/80 text-sm mt-1">Glimpses from our vibrant Happy Coding community.</p>
@@ -99,7 +114,7 @@
                     </a>
 
                     <a class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-md border border-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30" href="images/Gallary imges/unnamed (1).webp" target="_blank" rel="noopener noreferrer">
-                        <img src="images/Gallary imges/unnamed (1).webp" alt="Happy Coding students in classroom training session" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="images/Gallary imges/unnamed (1).webp" alt="Happy Coding students in classroom training session" class="gallery-image w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-5">
                             <h3 class="text-white font-display font-bold text-lg leading-tight">Classroom Training</h3>
                             <p class="text-white/80 text-sm mt-1">Full practical labs with 1:1 computer per student.</p>
@@ -107,7 +122,7 @@
                     </a>
 
                     <a class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-md border border-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30" href="images/Gallary imges/unnamed (2).webp" target="_blank" rel="noopener noreferrer">
-                        <img src="images/Gallary imges/unnamed (2).webp" alt="Happy Coding students collaborating on projects" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="images/Gallary imges/unnamed (2).webp" alt="Happy Coding students collaborating on projects" class="gallery-image w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-5">
                             <h3 class="text-white font-display font-bold text-lg leading-tight">Project Collaboration</h3>
                             <p class="text-white/80 text-sm mt-1">Students working together on live capstone projects.</p>
@@ -115,7 +130,7 @@
                     </a>
 
                     <a class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-md border border-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30" href="images/Gallary imges/unnamed (3).webp" target="_blank" rel="noopener noreferrer">
-                        <img src="images/Gallary imges/unnamed (3).webp" alt="Happy Coding mentor conducting a doubt-solving session" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="images/Gallary imges/unnamed (3).webp" alt="Happy Coding mentor conducting a doubt-solving session" class="gallery-image w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-5">
                             <h3 class="text-white font-display font-bold text-lg leading-tight">Doubt-Solving Session</h3>
                             <p class="text-white/80 text-sm mt-1">1:1 mentor support for every learner's success.</p>
@@ -123,7 +138,7 @@
                     </a>
 
                     <a class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-md border border-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30" href="images/Gallary imges/unnamed (4).webp" target="_blank" rel="noopener noreferrer">
-                        <img src="images/Gallary imges/unnamed (4).webp" alt="Happy Coding certificate distribution ceremony" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="images/Gallary imges/unnamed (4).webp" alt="Happy Coding certificate distribution ceremony" class="gallery-image w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-5">
                             <h3 class="text-white font-display font-bold text-lg leading-tight">Certificate Ceremony</h3>
                             <p class="text-white/80 text-sm mt-1">Celebrating course completions with verified certificates.</p>
@@ -131,7 +146,7 @@
                     </a>
 
                     <a class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-md border border-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30" href="images/Gallary imges/unnamed (5).webp" target="_blank" rel="noopener noreferrer">
-                        <img src="images/Gallary imges/unnamed (5).webp" alt="Happy Coding workshop on web development" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="images/Gallary imges/unnamed (5).webp" alt="Happy Coding workshop on web development" class="gallery-image w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-5">
                             <h3 class="text-white font-display font-bold text-lg leading-tight">Dev Workshop</h3>
                             <p class="text-white/80 text-sm mt-1">Monthly industry expert workshops &amp; hackathons.</p>
@@ -139,7 +154,7 @@
                     </a>
 
                     <a class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-md border border-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30" href="images/Gallary imges/unnamed (6).webp" target="_blank" rel="noopener noreferrer">
-                        <img src="images/Gallary imges/unnamed (6).webp" alt="Happy Coding digital marketing lab session" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="images/Gallary imges/unnamed (6).webp" alt="Happy Coding digital marketing lab session" class="gallery-image w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-5">
                             <h3 class="text-white font-display font-bold text-lg leading-tight">Digital Marketing</h3>
                             <p class="text-white/80 text-sm mt-1">SEO, Google Ads &amp; Meta Ads theory + live campaigns.</p>
@@ -147,7 +162,7 @@
                     </a>
 
                     <a class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-md border border-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30" href="images/Gallary imges/unnamed (7).webp" target="_blank" rel="noopener noreferrer">
-                        <img src="images/Gallary imges/unnamed (7).webp" alt="Happy Coding students in Excel and Tally GST lab" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="images/Gallary imges/unnamed (7).webp" alt="Happy Coding students in Excel and Tally GST lab" class="gallery-image w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-5">
                             <h3 class="text-white font-display font-bold text-lg leading-tight">Excel + Tally Lab</h3>
                             <p class="text-white/80 text-sm mt-1">MIS, Pivot &amp; GST Tally practical sessions.</p>
@@ -155,7 +170,7 @@
                     </a>
 
                     <a class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-md border border-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30" href="images/Gallary imges/unnamed (8).webp" target="_blank" rel="noopener noreferrer">
-                        <img src="images/Gallary imges/unnamed (8).webp" alt="Happy Coding placement drive and career guidance" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="images/Gallary imges/unnamed (8).webp" alt="Happy Coding placement drive and career guidance" class="gallery-image w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-5">
                             <h3 class="text-white font-display font-bold text-lg leading-tight">Placement Drive</h3>
                             <p class="text-white/80 text-sm mt-1">On-campus interviews with 40+ recruiting partners.</p>
@@ -163,7 +178,7 @@
                     </a>
 
                     <a class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-md border border-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30" href="images/Gallary imges/unnamed (9).webp" target="_blank" rel="noopener noreferrer">
-                        <img src="images/Gallary imges/unnamed (9).webp" alt="Happy Coding happy students after job placement" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="images/Gallary imges/unnamed (9).webp" alt="Happy Coding happy students after job placement" class="gallery-image w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-5">
                             <h3 class="text-white font-display font-bold text-lg leading-tight">Happy Students</h3>
                             <p class="text-white/80 text-sm mt-1">Smiling faces &amp; success stories from alumni.</p>
@@ -171,7 +186,7 @@
                     </a>
 
                     <a class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-md border border-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30" href="images/Gallary imges/unnamed (10).webp" target="_blank" rel="noopener noreferrer">
-                        <img src="images/Gallary imges/unnamed (10).webp" alt="Happy Coding graphic design and UI UX lab session" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="images/Gallary imges/unnamed (10).webp" alt="Happy Coding graphic design and UI UX lab session" class="gallery-image w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-5">
                             <h3 class="text-white font-display font-bold text-lg leading-tight">Graphic Design Lab</h3>
                             <p class="text-white/80 text-sm mt-1">Photoshop, Illustrator &amp; Canva portfolio building.</p>
@@ -179,7 +194,7 @@
                     </a>
 
                     <a class="gallery-item group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-md border border-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30" href="images/Gallary imges/unnamed (11).webp" target="_blank" rel="noopener noreferrer">
-                        <img src="images/Gallary imges/unnamed (11).webp" alt="Happy Coding peer learning and team activities" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="images/Gallary imges/unnamed (11).webp" alt="Happy Coding peer learning and team activities" class="gallery-image w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-5">
                             <h3 class="text-white font-display font-bold text-lg leading-tight">Peer Learning</h3>
                             <p class="text-white/80 text-sm mt-1">Collaborative project-based peer-to-peer learning.</p>

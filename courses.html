@@ -18,6 +18,21 @@
         .font-display { font-family: 'Nunito', Inter, ui-sans-serif, system-ui, sans-serif; }
         /* font-sans utility — Inter (body text) */
         body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+
+        /* Small motion polish for existing course cards and buttons */
+        .course-card,
+        .know-more-btn { transition: transform 200ms ease, box-shadow 200ms ease; }
+
+        .course-card:hover { transform: translateY(-3px); }
+        .know-more-btn:hover { transform: translateY(-2px); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .course-card,
+            .know-more-btn { transition: none !important; }
+
+            .course-card:hover,
+            .know-more-btn:hover { transform: none !important; }
+        }
     </style>
 </head>
 
