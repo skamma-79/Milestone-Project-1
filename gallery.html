@@ -10,9 +10,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* font-display utility — Nunito (headings/brand text) */
         .font-display { font-family: 'Nunito', Inter, ui-sans-serif, system-ui, sans-serif; }
-        /* font-sans utility — Inter (body text) */
+
         body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
     </style>
 </head>
@@ -24,17 +23,17 @@
 
             <div class="flex items-center gap-3">
                 <img src="images/image-removebg-preview (1).webp" alt="Happy Coding institute logo — computer coaching in Jaipur" class="w-[4.5rem] h-[4.5rem] object-contain">
-                <a href="index.html" class="font-display text-xl font-extrabold text-slate-900 hover:text-purple-600 transition-colors dark:text-white">Happy Coding</a>
+                <a href="index.html" class="font-display text-xl font-extrabold text-slate-900 hover:text-purple-600 focus-visible:text-purple-600 transition-colors dark:text-white dark:focus-visible:text-purple-400">Happy Coding</a>
             </div>
 
             <nav class="hidden lg:flex items-center" aria-label="Main navigation">
                 <ul class="flex items-center gap-8">
-                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 transition dark:text-slate-300 dark:hover:text-purple-400" href="index.html">Home</a></li>
-                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 transition dark:text-slate-300 dark:hover:text-purple-400" href="about.html">About</a></li>
-                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 transition dark:text-slate-300 dark:hover:text-purple-400" href="courses.html">Courses</a></li>
-                    <li><a class="font-semibold text-purple-600 border-b-2 border-purple-600 pb-1 dark:text-purple-400 dark:border-purple-400" href="gallery.html">Gallery</a></li>
-                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 transition dark:text-slate-300 dark:hover:text-purple-400" href="pricing.html">Pricing</a></li>
-                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 transition dark:text-slate-300 dark:hover:text-purple-400" href="contact.html">Contact</a></li>
+                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 focus-visible:text-purple-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600/30 transition dark:text-slate-300 dark:hover:text-purple-400 dark:focus-visible:text-purple-400" href="index.html">Home</a></li>
+                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 focus-visible:text-purple-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600/30 transition dark:text-slate-300 dark:hover:text-purple-400 dark:focus-visible:text-purple-400" href="about.html">About</a></li>
+                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 focus-visible:text-purple-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600/30 transition dark:text-slate-300 dark:hover:text-purple-400 dark:focus-visible:text-purple-400" href="courses.html">Courses</a></li>
+                    <li><a class="font-semibold text-purple-600 border-b-2 border-purple-600 pb-1 focus-visible:text-purple-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600/30 dark:text-purple-400 dark:border-purple-400 dark:focus-visible:text-purple-400" href="gallery.html">Gallery</a></li>
+                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 focus-visible:text-purple-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600/30 transition dark:text-slate-300 dark:hover:text-purple-400 dark:focus-visible:text-purple-400" href="pricing.html">Pricing</a></li>
+                    <li><a class="font-semibold text-slate-700 hover:text-purple-600 focus-visible:text-purple-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600/30 transition dark:text-slate-300 dark:hover:text-purple-400 dark:focus-visible:text-purple-400" href="contact.html">Contact</a></li>
                 </ul>
             </nav>
 
@@ -44,7 +43,7 @@
                 </a>
             </div>
 
-            <label for="nav-toggle" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg text-purple-600 hover:bg-indigo-50 cursor-pointer" aria-label="Toggle navigation menu">
+            <label for="nav-toggle" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg text-purple-600 hover:bg-indigo-50 focus-visible:bg-indigo-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600/30 cursor-pointer" aria-label="Toggle navigation menu">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
             </label>
         </header>
@@ -53,12 +52,12 @@
 
         <nav class="lg:hidden hidden peer-checked/nav:block bg-white border-t border-gray-100 shadow-lg dark:bg-slate-900 dark:border-slate-700" aria-label="Mobile navigation">
             <ul class="flex flex-col px-4 py-4 gap-1">
-                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800" href="index.html">Home</a></li>
-                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800" href="about.html">About</a></li>
-                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800" href="courses.html">Courses</a></li>
-                <li><a class="block py-2.5 px-3 font-semibold text-purple-600 bg-indigo-50 rounded-lg dark:text-purple-400 dark:bg-slate-800" href="gallery.html">Gallery</a></li>
-                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800" href="pricing.html">Pricing</a></li>
-                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800" href="contact.html">Contact</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 focus-visible:text-purple-600 focus-visible:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600/30 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800 dark:focus-visible:text-purple-400 dark:focus-visible:bg-slate-800" href="index.html">Home</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 focus-visible:text-purple-600 focus-visible:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600/30 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800 dark:focus-visible:text-purple-400 dark:focus-visible:bg-slate-800" href="about.html">About</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 focus-visible:text-purple-600 focus-visible:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600/30 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800 dark:focus-visible:text-purple-400 dark:focus-visible:bg-slate-800" href="courses.html">Courses</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-purple-600 bg-indigo-50 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600/30 dark:text-purple-400 dark:bg-slate-800" href="gallery.html">Gallery</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 focus-visible:text-purple-600 focus-visible:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600/30 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800 dark:focus-visible:text-purple-400 dark:focus-visible:bg-slate-800" href="pricing.html">Pricing</a></li>
+                <li><a class="block py-2.5 px-3 font-semibold text-slate-700 hover:text-purple-600 hover:bg-slate-50 focus-visible:text-purple-600 focus-visible:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600/30 rounded-lg transition dark:text-slate-300 dark:hover:text-purple-400 dark:hover:bg-slate-800 dark:focus-visible:text-purple-400 dark:focus-visible:bg-slate-800" href="contact.html">Contact</a></li>
                 <li class="pt-2">
                     <a href="contact.html#enroll-form" class="block text-center py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-600/30 transition">Enroll Now</a>
                 </li>
@@ -74,7 +73,7 @@
                 <h1 class="font-display text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-3">Our Gallery</h1>
                 <p class="text-slate-500 dark:text-slate-300 text-lg max-w-2xl mx-auto mb-8">Glimpses of Happy Coding campus life, classroom sessions, events, workshops, and our proud placement partners.</p>
                 <nav aria-label="Breadcrumb" class="inline-flex items-center gap-2 text-sm">
-                    <a class="text-purple-600 font-semibold hover:underline" href="index.html">Home</a>
+                    <a class="text-purple-600 font-semibold hover:underline focus-visible:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600/30" href="index.html">Home</a>
                     <span class="text-slate-500 dark:text-slate-300">/</span>
                     <span class="text-slate-700 dark:text-slate-300 font-semibold">Gallery</span>
                 </nav>
@@ -209,37 +208,37 @@
                 <div>
                     <h3 class="font-display font-bold text-lg mb-4 text-white">Top Products</h3>
                     <ul class="space-y-2 text-white/70 text-sm">
-                        <li><a class="hover:text-white transition" href="#">Managed Website</a></li>
-                        <li><a class="hover:text-white transition" href="#">Manage Reputation</a></li>
-                        <li><a class="hover:text-white transition" href="#">Power Tools</a></li>
-                        <li><a class="hover:text-white transition" href="#">Marketing Service</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Managed Website</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Manage Reputation</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Power Tools</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Marketing Service</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="font-display font-bold text-lg mb-4 text-white">Quick Links</h3>
                     <ul class="space-y-2 text-white/70 text-sm">
-                        <li><a class="hover:text-white transition" href="#">Jobs</a></li>
-                        <li><a class="hover:text-white transition" href="#">Brand Assets</a></li>
-                        <li><a class="hover:text-white transition" href="#">Investor Relations</a></li>
-                        <li><a class="hover:text-white transition" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Jobs</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Brand Assets</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Investor Relations</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="font-display font-bold text-lg mb-4 text-white">Features</h3>
                     <ul class="space-y-2 text-white/70 text-sm">
-                        <li><a class="hover:text-white transition" href="#">Jobs</a></li>
-                        <li><a class="hover:text-white transition" href="#">Brand Assets</a></li>
-                        <li><a class="hover:text-white transition" href="#">Investor Relations</a></li>
-                        <li><a class="hover:text-white transition" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Jobs</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Brand Assets</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Investor Relations</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="font-display font-bold text-lg mb-4 text-white">Resources</h3>
                     <ul class="space-y-2 text-white/70 text-sm">
-                        <li><a class="hover:text-white transition" href="#">Guides</a></li>
-                        <li><a class="hover:text-white transition" href="#">Research</a></li>
-                        <li><a class="hover:text-white transition" href="#">Experts</a></li>
-                        <li><a class="hover:text-white transition" href="#">Agencies</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Guides</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Research</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Experts</a></li>
+                        <li><a class="hover:text-white focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" href="#">Agencies</a></li>
                     </ul>
                 </div>
                 <div class="lg:col-span-1">
@@ -255,10 +254,10 @@
             <div class="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <p class="text-white/70 text-sm">© Happy Coding ♥ — Jaipur's #1 Coding Institute</p>
                 <div class="flex items-center gap-3 text-white/70">
-                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white transition" aria-label="Facebook">f</a>
-                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white transition" aria-label="Twitter">𝕏</a>
-                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white transition" aria-label="Instagram">◉</a>
-                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white transition" aria-label="LinkedIn">in</a>
+                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white focus-visible:bg-white/10 focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" aria-label="Facebook">f</a>
+                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white focus-visible:bg-white/10 focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" aria-label="Twitter">𝕏</a>
+                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white focus-visible:bg-white/10 focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" aria-label="Instagram">◉</a>
+                    <a href="#" class="w-9 h-9 inline-flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 hover:text-white focus-visible:bg-white/10 focus-visible:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition" aria-label="LinkedIn">in</a>
                 </div>
             </div>
         </div>
