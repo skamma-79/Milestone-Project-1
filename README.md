@@ -15,8 +15,10 @@ Happy Coding is a computer coaching center based in Jaipur, Rajasthan. This webs
 | Page | File | Description |
 |------|------|-------------|
 | Home | `index.html` | Hero, highlights, Why Choose Happy Coding, and testimonials |
-| Courses | `courses.html` | 10 course cards (CSS Grid), pricing table Basic/Standard/Premium |
+| About | `about.html` | Our story, mission & values, team, and placement partners |
+| Courses | `courses.html` | 9 course cards (CSS Grid), pricing table Basic/Standard/Premium |
 | Gallery | `gallery.html` | Responsive image grid for campus, classroom, and workshop images |
+| Pricing | `pricing.html` | Flexible batch plans, plan comparison, and pricing FAQ |
 | Contact / Enroll | `contact.html` | Enrollment form, address, Google Map embed, and business hours |
 
 ---
